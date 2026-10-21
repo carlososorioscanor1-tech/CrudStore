@@ -28,149 +28,155 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvProductos = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            txtNombre = new TextBox();
+            txtPrecio = new TextBox();
+            cmbCategorias = new ComboBox();
+            btnGuardar = new Button();
+            btnEliminar = new Button();
+            btnLimpiar = new Button();
+            btnEditar = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvProductos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(32, 21);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1070, 225);
-            dataGridView1.TabIndex = 0;
+            dgvProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProductos.Location = new Point(32, 21);
+            dgvProductos.Name = "dgvProductos";
+            dgvProductos.RowHeadersWidth = 62;
+            dgvProductos.Size = new Size(1070, 225);
+            dgvProductos.TabIndex = 0;
+            dgvProductos.CellClick += dgvProductos_CellClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(81, 285);
+            label1.Location = new Point(45, 285);
             label1.Name = "label1";
-            label1.Size = new Size(59, 25);
+            label1.Size = new Size(78, 25);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "Nombre";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(81, 337);
+            label2.Location = new Point(45, 339);
             label2.Name = "label2";
-            label2.Size = new Size(59, 25);
+            label2.Size = new Size(60, 25);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "Precio";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(81, 407);
+            label3.Location = new Point(45, 412);
             label3.Name = "label3";
-            label3.Size = new Size(59, 25);
+            label3.Size = new Size(96, 25);
             label3.TabIndex = 3;
-            label3.Text = "label3";
+            label3.Text = "Categorias";
             // 
-            // textBox1
+            // txtNombre
             // 
-            textBox1.Location = new Point(160, 279);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(266, 31);
-            textBox1.TabIndex = 4;
+            txtNombre.Location = new Point(142, 285);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(266, 31);
+            txtNombre.TabIndex = 4;
             // 
-            // textBox2
+            // txtPrecio
             // 
-            textBox2.Location = new Point(186, 334);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(319, 31);
-            textBox2.TabIndex = 5;
+            txtPrecio.Location = new Point(121, 339);
+            txtPrecio.Name = "txtPrecio";
+            txtPrecio.Size = new Size(319, 31);
+            txtPrecio.TabIndex = 5;
             // 
-            // comboBox1
+            // cmbCategorias
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(175, 422);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(412, 33);
-            comboBox1.TabIndex = 6;
+            cmbCategorias.FormattingEnabled = true;
+            cmbCategorias.Location = new Point(159, 412);
+            cmbCategorias.Name = "cmbCategorias";
+            cmbCategorias.Size = new Size(412, 33);
+            cmbCategorias.TabIndex = 6;
             // 
-            // button1
+            // btnGuardar
             // 
-            button1.Location = new Point(61, 532);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 34);
-            button1.TabIndex = 7;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            btnGuardar.Location = new Point(61, 532);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(112, 34);
+            btnGuardar.TabIndex = 7;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click_1;
             // 
-            // button2
+            // btnEliminar
             // 
-            button2.Location = new Point(239, 532);
-            button2.Name = "button2";
-            button2.Size = new Size(112, 34);
-            button2.TabIndex = 8;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnEliminar.Location = new Point(441, 532);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(112, 34);
+            btnEliminar.TabIndex = 9;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click_1;
             // 
-            // button3
+            // btnLimpiar
             // 
-            button3.Location = new Point(441, 532);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 34);
-            button3.TabIndex = 9;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnLimpiar.Location = new Point(633, 532);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(112, 34);
+            btnLimpiar.TabIndex = 10;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click_1;
             // 
-            // button4
+            // btnEditar
             // 
-            button4.Location = new Point(633, 532);
-            button4.Name = "button4";
-            button4.Size = new Size(112, 34);
-            button4.TabIndex = 10;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnEditar.Location = new Point(239, 532);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(112, 34);
+            btnEditar.TabIndex = 8;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click_1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1132, 605);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnLimpiar);
+            Controls.Add(btnEliminar);
+            Controls.Add(btnEditar);
+            Controls.Add(btnGuardar);
+            Controls.Add(cmbCategorias);
+            Controls.Add(txtPrecio);
+            Controls.Add(txtNombre);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvProductos);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvProductos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvProductos;
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private TextBox txtNombre;
+        private TextBox txtPrecio;
+        private ComboBox cmbCategorias;
+        private Button btnGuardar;
+        private Button btnEliminar;
+        private Button btnLimpiar;
+        private Button btnEditar;
     }
 }

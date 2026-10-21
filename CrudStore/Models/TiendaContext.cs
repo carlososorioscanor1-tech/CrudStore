@@ -15,7 +15,8 @@ namespace CRUDTablas.Models
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string dbPath = Path.Combine(baseDir, "TiendaDB.mdf");
 
-            optionsBuilder.UseSqlServer($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={dbPath};Integrated Security=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer($@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={dbPath};Database=TiendaDB_Nueva;Integrated Security=True;TrustServerCertificate=True");
+
         }
     }
 }
